@@ -16,11 +16,7 @@ const getTriangles = (maxP) => {
   for (let a = startPoint; a !== endPoint; a += 1) {
     for (let b = a + 1; b !== endPoint; b += 1) {
       const triangleP = getTriangleP(a, b);
-
-      if (Number.isInteger(triangleP) && triangleP <= maxP) {
-        count += 1;
-        break;                             // for 'a' can exist only one 'b'
-      }
+      if (Number.isInteger(triangleP) && triangleP <= maxP) count += 1;
     }
   }
 
